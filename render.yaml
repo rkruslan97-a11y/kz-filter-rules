@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: kz-filter-server
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_PASS
+        value: school2024

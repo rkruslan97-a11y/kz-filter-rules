@@ -1,0 +1,12 @@
+{
+  "name": "kz-filter-server",
+  "version": "1.0.0",
+  "description": "KZ School Content Filter — сервер управления правилами",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
