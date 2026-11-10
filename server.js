@@ -29,7 +29,11 @@ const DEFAULT_RULES = {
     "скачать игру торрент", "взломанные игры скачать",
     "counter strike скачать", "gta скачать бесплатно"
   ],
-  custom_message: "Данный контент заблокирован администрацией школы"
+  custom_message: "Данный контент заблокирован администрацией школы",
+  whitelist_domains: [
+    "bilimclass.kz", "bilimland.kz", "kundelik.kz",
+    "mektep.edu.kz", "edu.gov.kz", "nao.kz"
+  ]
 };
 
 // ─── Загрузка/сохранение данных ───────────────────────────────
@@ -128,6 +132,7 @@ const server = http.createServer(async (req, res) => {
     const current = loadRules();
     if (Array.isArray(body.blocked_domains)) current.blocked_domains = body.blocked_domains;
     if (Array.isArray(body.blocked_phrases)) current.blocked_phrases = body.blocked_phrases;
+    if (Array.isArray(body.whitelist_domains)) current.whitelist_domains = body.whitelist_domains;
     if (body.custom_message !== undefined) current.custom_message = body.custom_message;
     const saved = saveRules(current);
     res.writeHead(200, { "Content-Type": "application/json" });
