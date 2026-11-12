@@ -149,8 +149,8 @@ input::placeholder{color:var(--fg2);opacity:.7}
       <p style="font-size:.8rem;color:var(--fg2);margin-bottom:10px">Эти сайты никогда не блокируются, даже если совпадают с правилами фильтра</p>
       <div class="tag-wrap" id="w-tags"></div>
       <div class="add-row">
-        <input type="text" id="w-input" placeholder="bilimclass.kz" onkeydown="if(event.key==='Enter')addWhitelist()">
-        <button class="btn btn-success btn-sm" onclick="addWhitelist()">+ Разрешить</button>
+        <input type="text" id="w-input" placeholder="bilimclass.kz" onkeydown="if(event.key==='Enter')addWhitelist()" style="flex:1">
+      <button class="btn btn-success" style="padding:12px 22px;font-size:.88rem;white-space:nowrap" onclick="addWhitelist()">+ Разрешить</button>
       </div>
     </div>
   </div>
