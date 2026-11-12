@@ -118,8 +118,8 @@ input::placeholder{color:var(--fg2);opacity:.7}
     <div class="card-body">
       <div class="tag-wrap" id="d-tags"></div>
       <div class="add-row">
-        <input type="text" id="d-input" placeholder="example.com" onkeydown="if(event.key==='Enter')addDomain()">
-        <button class="btn btn-primary btn-sm" onclick="addDomain()">+ Добавить</button>
+      <input type="text" id="d-input" placeholder="example.com" onkeydown="if(event.key==='Enter')addDomain()" style="flex:1">
+      <button class="btn btn-primary" style="padding:12px 22px;font-size:.88rem;white-space:nowrap" onclick="addDomain()">+ Добавить</button>
       </div>
     </div>
   </div>
@@ -133,8 +133,8 @@ input::placeholder{color:var(--fg2);opacity:.7}
     <div class="card-body">
       <div class="tag-wrap" id="p-tags"></div>
       <div class="add-row">
-        <input type="text" id="p-input" placeholder="слово или фраза" onkeydown="if(event.key==='Enter')addPhrase()">
-        <button class="btn btn-primary btn-sm" onclick="addPhrase()">+ Добавить</button>
+        <input type="text" id="p-input" placeholder="слово или фраза" onkeydown="if(event.key==='Enter')addPhrase()" style="flex:1">
+      <button class="btn btn-primary" style="padding:12px 22px;font-size:.88rem;white-space:nowrap" onclick="addPhrase()">+ Добавить</button>
       </div>
     </div>
   </div>
